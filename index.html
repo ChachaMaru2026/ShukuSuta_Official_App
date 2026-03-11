@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宿スタ - サポート</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">📖</div>
+      <span class="logo-text">宿スタ</span>
+    </a>
+    <p class="page-title">サポートセンター</p>
+  </div>
+</header>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="active">サポート</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="terms.html">利用規約</a>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+
+    <h1>サポート・ヘルプ</h1>
+    <p>「宿スタ」をご利用いただきありがとうございます。こちらのページでは、よくあるご質問への回答とお問い合わせ方法をご案内しています。</p>
+
+    <!-- App Overview -->
+    <div class="card">
+      <h3>宿スタとは</h3>
+      <p>宿スタは、小学校高学年から中学生のお子さまを対象とした宿題・勉強タスク管理アプリです。保護者の方がタスクを登録し、お子さまがタイマーを使って集中して学習を進めることができます。タスクを完了するとはなまるとコインがもらえる、楽しい仕組みになっています。</p>
+    </div>
+
+    <!-- FAQ -->
+    <h2>よくあるご質問</h2>
+
+    <div class="faq-item">
+      <p class="question">Q. アプリを初めて起動したとき、何をすればいいですか？</p>
+      <p class="answer">初回起動時に、保護者用の4桁PINコードとお子さまの呼び名を設定する画面が表示されます。保護者の方とお子さまで一緒に設定してください。PINコードは保護者画面へのアクセスに使用します。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="question">Q. タスク（宿題）はどうやって登録しますか？</p>
+      <p class="answer">画面下部の「おうちのひと」タブをタップし、PINコードを入力して保護者画面にアクセスします。日付を選択して「+」ボタンからタスクを追加できます。教科・タスク名・目安時間を設定してください。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="question">Q. PINコードを忘れてしまいました</p>
+      <p class="answer">現在のバージョンでは、PINコードのリセット機能はアプリ内に搭載されておりません。アプリを一度削除して再インストールすることで、初期状態に戻すことができます。ただし、登録済みのタスクやコインのデータはすべて消去されますのでご注意ください。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="question">Q. コインは何に使えますか？</p>
+      <p class="answer">コインは、お子さまの学習の達成感を高めるための仕組みです。タスクを1つ完了するごとに10コインが獲得できます。現在のバージョンではコインの使い道（交換機能など）は搭載されていませんが、ご家庭内でのごほうびルールと組み合わせてご活用ください。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="question">Q. データはどこに保存されますか？</p>
+      <p class="answer">すべてのデータ（タスク、コイン、設定情報）は、お使いの端末内にのみ保存されます。外部のサーバーやクラウドにデータが送信されることはありません。そのため、端末を変更した場合やアプリを削除した場合、データの引き継ぎはできません。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="question">Q. 複数の子どもで使えますか？</p>
+      <p class="answer">現在のバージョンでは、1台の端末につき1人のお子さま用に設計されています。複数のお子さまでご利用になる場合は、それぞれの端末にアプリをインストールしてご使用ください。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="question">Q. インターネット接続は必要ですか？</p>
+      <p class="answer">いいえ、宿スタはオフラインで完全に動作します。インターネット接続は不要です。</p>
+    </div>
+
+    <div class="faq-item">
+      <p class="question">Q. 対応しているOSバージョンは？</p>
+      <p class="answer">iOS 16以降を搭載したiPhoneに対応しています。iPadでもご利用いただけます。</p>
+    </div>
+
+    <!-- Contact -->
+    <h2>お問い合わせ</h2>
+
+    <div class="contact-section">
+      <p>上記のFAQで解決しない場合は、以下のフォームからお問い合わせください。通常2〜3営業日以内にご返信いたします。</p>
+
+      <form id="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">お名前</label>
+          <input type="text" id="name" name="name" required placeholder="例：山田 太郎">
+        </div>
+
+        <div class="form-group">
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" name="email" required placeholder="例：example@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="category">お問い合わせ種別</label>
+          <select id="category" name="category">
+            <option value="usage">使い方について</option>
+            <option value="bug">不具合の報告</option>
+            <option value="feature">機能のご要望</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">お問い合わせ内容</label>
+          <textarea id="message" name="message" required placeholder="お問い合わせ内容をご記入ください"></textarea>
+        </div>
+
+        <button type="submit" class="btn">送信する</button>
+      </form>
+
+      <p id="form-result" style="display:none; margin-top: 16px; padding: 12px 16px; border-radius: 8px;"></p>
+    </div>
+
+    <h2>その他のお問い合わせ方法</h2>
+    <p>メールでのお問い合わせも受け付けております。</p>
+    <p><strong>メールアドレス：</strong> <a href="mailto:shukusutaofficial@gmail.com" style="color: var(--green);">shukusutaofficial@gmail.com</a></p>
+
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="index.html">サポート</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="terms.html">利用規約</a>
+    </div>
+    <p>&copy; 2026 宿スタ. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  var result = document.getElementById('form-result');
+  result.style.display = 'block';
+  result.style.background = '#E8F5E9';
+  result.style.color = '#388E3C';
+  result.textContent = 'お問い合わせを受け付けました。ご返信までしばらくお待ちください。';
+  document.getElementById('contact-form').reset();
+  // NOTE: 実際の送信処理はバックエンド連携（Formspree, Google Forms等）が必要です
+}
+</script>
+
+</body>
+</html>
